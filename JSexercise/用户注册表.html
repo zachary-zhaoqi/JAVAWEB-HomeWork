@@ -1,0 +1,95 @@
+<!-- /*
+ * @Author: 赵奇 
+ * @Date: 2018-09-06 15:15:10 
+ * @Last Modified by:   赵奇 
+ * @Last Modified time: 2018-09-06 15:15:10 
+ */ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <form action="" id="signin">
+        <table border="0" style="margin:auto;width:75%;">
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <h1>注册</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <P class="hint">用户名</P>
+                </td>
+                <td><input type="text" id="username" name="username" class="myinput"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="hint">密码</p>
+                </td>
+                <td><input type="password" name="userpwd" id="userpwd" class="myinput"></td>
+            </tr>
+            <td>
+                <p class="hint">性别</p>
+            </td>
+            <td>
+                <input type="radio" name="sex" value="0">男
+                <input type="radio" name="sex" value="1">女 </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="hint">兴趣</p>
+                </td>
+                <td>
+                    <input type="checkbox" name="interest" value="0">德
+                    <input type="checkbox" name="interest" value="0">智
+                    <input type="checkbox" name="interest" value="0">体
+                    <input type="checkbox" name="interest" value="0">美
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="hint">选个喜欢的颜色吧</p>
+                </td>
+                <td><input type="color" name="color"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="hint">出生日期</p>
+                </td>
+                <td><input type="date" name="birthday"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="hint">邮件</p>
+                </td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="hint">联系地址</p>
+                </td>
+                <td> <select name="addressprovince" id="addressprovince"></select>
+                    <select name="addresscity" id="addresscity"></select>
+                    <select name="addressregion" id="addressregion"></select>
+                </td>
+
+            </tr>
+            <tr>
+                <center>
+                    <td><input type="submit" value="提交" style="float: right;"></td>
+                    <td><input type="reset" value="重置" style="float: left;"></td>
+                </center>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
