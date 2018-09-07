@@ -1,0 +1,174 @@
+<!-- /*
+ * @Author: 赵奇 
+ * @Date: 2018-09-04 09:21:15 
+ * @Last Modified by:   赵奇 
+ * @Last Modified time: 2018-09-04 09:21:15 
+ */ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    
+</head>
+<body>
+    <table align="center" frame="border">
+        <form action="" onsubmit="return allCheck()">
+            <tr>
+                <td align="center">
+                    <h1>申诉单</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table frame="border" rules="all">
+                            <tr>
+                                <td rowspan="2">
+                                    <p>申诉人</p>
+                                </td>
+                                <td>
+                                    <p>姓名(必须为申诉所</br>涉及号码机主姓名)</p>
+                                </td>
+                                <td>
+                                    <input type="text" id="name" name="name" onblur="nameCheck()">
+                                    <span id="bitian">*</span><p id="namehint" class="hint"></p>
+                                </td>
+                                <td>
+                                    <p>联系电话</p>
+                                </td>
+                                <td>
+                                    <input type="tel" name="tel" id="tel" onblur="telCheck()">
+                                    <span id="bitian">*</span><p id="telhint" class="hint"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>电子邮件</p>
+                                </td>
+                                <td>
+                                    <input type="text" name="email" id="email" onblur="emailCheck()">
+                                    <span id="bitian">*</span><p id="emailhint" class="hint"></p>
+                                </td>
+                                <td>
+                                    <p>邮件编码</p>
+                                </td>
+                                <td>
+                                    <input type="text" name="emailcode" id="emailcode" onblur="emailcodeCheck()">
+                                    <span id="bitian">*</span><p id="emailcodehint" class="hint"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">
+                                    <p>被申诉人</p>
+                                </td>
+                                <td>
+                                    <p>企业名称</p>
+                                </td>
+                                <td colspan="3">
+                                    <select name="corporationOne" id="corporationOne" onchange="CreatecorporationTwo(this.options[this.options.selectedIndex].value)">
+                                        <option id="corporationOne0" value="">未选择</option>
+                                        <option id="corporationOne1" value="1">福州市</option>
+                                        <option id="corporationOne2" value="2">泉州市</option>
+                                        <option id="corporationOne3" value="3">厦门市</option>
+                                    </select>
+                                    <select name="" id="corporationTwo">
+                                        <option id="corporationTwo0" value="">未选择</option>
+                                        <option id="corporationTwo1" value="1">晋安区</option>
+                                        <option id="corporationTwo2" value="2">鼓楼区</option>
+                                        <option id="corporationTwo3" value="3">仓山区</option>
+                                    </select>
+                                    <select name="" id="corporationThree">
+                                            <option id="corporationThree0" value="">未选择</option>
+                                            <option id="corporationThree1" value="1">电信</option>
+                                            <option id="corporationThree2" value="2">移动</option>
+                                            <option id="corporationThree3" value="3">联通</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>通讯地址</p>
+                                </td>
+                                <td colspan="3">
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>是否就申诉事项向被申诉人提出投诉</p>
+                                </td>
+                                <td colspan="4">
+                                    <input type="radio" name="" value="" checked>是<input type="radio" name="" id="" value="">否
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>被申诉人是否给予处理或答复</p>
+                                </td>
+                                <td colspan="4">
+                                    <input type="radio" name="" value="">是<input type="radio" name="" id="" value="">否
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">
+                                    <p>申诉内容</p>
+                                </td>
+                                <td>
+                                    <p>申诉要求</p>
+                                </td>
+                                <td colspan="3">
+                                    <textarea name="appealContent" id="appealContent" cols="60" rows="7" onblur="appealContentCheck()"></textarea>
+                                    <span id="bitian">*</span><p id="appealContenthint" class="hint"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>申诉事实与理由</p>
+                                </td>
+                                <td colspan="3">
+                                    <textarea name="appealReason" id="appealReason" cols="60" rows="7" onblur="appealReasonCheck()"></textarea>
+                                    <span id="bitian">*</span><p id="appealReasonhint" class="hint"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>申诉依据</p>
+                                </td>
+                                <td colspan="3">
+                                    <textarea name="appealEvidence" id="appealEvidence" cols="60" rows="7" onblur="appealEvidenceCheck()"></textarea>
+                                    <span id="bitian">*</span><p id="appealEvidencehint" class="hint"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>申诉来源</p>
+                                </td>
+                                <td colspan="4">
+                                    <select name="" id="">传真</select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>附件上传</p>
+                                </td>
+                                <td colspan="4">
+                                    <input type="file" name="" id="">
+                                </td>
+                            </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <input type="submit" value="提交">
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
