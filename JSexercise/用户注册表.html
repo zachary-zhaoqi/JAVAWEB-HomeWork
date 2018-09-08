@@ -52,6 +52,7 @@
                     <input type="checkbox" name="interest" value="0">智
                     <input type="checkbox" name="interest" value="0">体
                     <input type="checkbox" name="interest" value="0">美
+                    <input type="checkbox" name="interest" value="0">劳
                 </td>
             </tr>
             <tr>
@@ -76,9 +77,9 @@
                 <td>
                     <p class="hint">联系地址</p>
                 </td>
-                <td> <select name="addressprovince" id="addressprovince"></select>
+                <td> 
+                    <select name="addressprovince" id="addressprovince" onchange="changetCity()"> </select>
                     <select name="addresscity" id="addresscity"></select>
-                    <select name="addressregion" id="addressregion"></select>
                 </td>
 
             </tr>
