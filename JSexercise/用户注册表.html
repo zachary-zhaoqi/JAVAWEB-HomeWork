@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <form action="" id="signin">
+    <form action="" id="signin" onsubmit="return allCheck(this)">
         <table border="0" style="margin:auto;width:75%;">
             <tr>
                 <td colspan="2" style="text-align:center;">
@@ -26,52 +26,40 @@
             </tr>
             <tr>
                 <td>
-                    <P class="hint">用户名</P>
+                    <P id="usernamehint" class="hint">用户名</P>
                 </td>
-                <td><input type="text" id="username" name="username" class="myinput"></td>
+                <td><input type="text" id="username" name="username" class="myinput" onblur="isNullCheck(this)"></td>
             </tr>
             <tr>
                 <td>
                     <p class="hint">密码</p>
                 </td>
-                <td><input type="password" name="userpwd" id="userpwd" class="myinput"></td>
+                <td><input type="password" name="userpwd" id="userpwd" class="myinput" onblur="isNullCheck(this)"></td>
             </tr>
             <td>
                 <p class="hint">性别</p>
             </td>
             <td>
-                <input type="radio" name="sex" value="0">男
-                <input type="radio" name="sex" value="1">女 </td>
+                <input type="radio" name="sex" value="0" checked>男
+                <input type="radio" name="sex" value="1" >女 </td>
             </tr>
             <tr>
                 <td>
                     <p class="hint">兴趣</p>
                 </td>
                 <td>
-                    <input type="checkbox" name="interest" value="0">德
-                    <input type="checkbox" name="interest" value="0">智
-                    <input type="checkbox" name="interest" value="0">体
-                    <input type="checkbox" name="interest" value="0">美
-                    <input type="checkbox" name="interest" value="0">劳
+                    <input type="checkbox" name="interest" value="1">德
+                    <input type="checkbox" name="interest" value="2">智
+                    <input type="checkbox" name="interest" value="3">体
+                    <input type="checkbox" name="interest" value="4">美
+                    <input type="checkbox" name="interest" value="5">劳
                 </td>
             </tr>
             <tr>
                 <td>
-                    <p class="hint">选个喜欢的颜色吧</p>
+                    <p id="emailhint" class="hint">邮件</p>
                 </td>
-                <td><input type="color" name="color"></td>
-            </tr>
-            <tr>
-                <td>
-                    <p class="hint">出生日期</p>
-                </td>
-                <td><input type="date" name="birthday"></td>
-            </tr>
-            <tr>
-                <td>
-                    <p class="hint">邮件</p>
-                </td>
-                <td><input type="email" name="email"></td>
+                <td><input type="email" id="email" name="email" onblur="emailCheck()"></td>
             </tr>
             <tr>
                 <td>
@@ -91,6 +79,24 @@
             </tr>
         </table>
     </form>
+    <script>
+    var json_array = [{
+            "city": ["西城", "东城", "崇文", "宣武", ],
+            "province": "北京市"
+        },
+        {
+            "city": ["青羊", "河东", "河西", "南开", ],
+            "province": "天津市"
+        }
+    ];
+    var province = document.getElementById("addressprovince");
+    province.add(new Option("请选择省份", 0), null);
+    var city = document.getElementById("addresscity");
+    city.add(new Option("请选择城市", 0), null);
+    for (var i = 0; i < json_array.length; i++) {
+        var json_p = json_array[i].province;
+        province.add(new Option(json_p, i + 1), null);
+    }</script>
 </body>
 
 </html>
