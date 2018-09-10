@@ -1,0 +1,85 @@
+<!-- /*
+ * @Author: 赵奇 
+ * @Date: 2018-09-06 15:15:10 
+ * @Last Modified by:   赵奇 
+ * @Last Modified time: 2018-09-06 15:15:10 
+ */ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <form action="" id="signin" onsubmit="return allCheck(this)">
+        <table border="0" style="margin:auto;width:75%;">
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <h1>注册</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <P id="usernamehint" class="hint">用户名</P>
+                </td>
+                <td><input type="text" id="username" name="username" class="myinput" onblur="isNullCheck(this)"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="hint">密码</p>
+                </td>
+                <td><input type="password" name="userpwd" id="userpwd" class="myinput" onblur="isNullCheck(this)"></td>
+            </tr>
+            <td>
+                <p class="hint">性别</p>
+            </td>
+            <td>
+                <input type="radio" name="sex" value="0" checked>男
+                <input type="radio" name="sex" value="1">女 </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="hint">兴趣</p>
+                </td>
+                <td>
+                    <input type="checkbox" name="interest" value="1">德
+                    <input type="checkbox" name="interest" value="2">智
+                    <input type="checkbox" name="interest" value="3">体
+                    <input type="checkbox" name="interest" value="4">美
+                    <input type="checkbox" name="interest" value="5">劳
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="emailhint" class="hint">邮件</p>
+                </td>
+                <td><input type="email" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="hint">联系地址</p>
+                </td>
+                <td>
+                    <select name="addressprovince" id="addressprovince"> </select>
+                    <select name="addresscity" id="addresscity"></select>
+                </td>
+            </tr>
+            <tr>
+                <center>
+                    <td><input type="submit" value="提交" style="float: right;"></td>
+                    <td><input type="reset" value="重置" style="float: left;"></td>
+                </center>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>

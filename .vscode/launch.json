@@ -7,7 +7,13 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Launch 用户注册表",
+            "name": "Launch JqueryExercise",
+            "file": "${workspaceFolder}/JqueryExercise/用户注册表.html"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch JSexercise",
             "file": "${workspaceFolder}/JSexercise/用户注册表.html"
         },
         {
